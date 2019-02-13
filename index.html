@@ -8,6 +8,7 @@
         <body>
             <button id="button"> Get Text File </button>
             <br></br>
+            <div id="text"></div>
             
             
             <script>
@@ -32,6 +33,7 @@
                         console.log('READYSTATE:', xhr.readystate);
                         if(this.status == 200) {
                              // console.log(this.responseText);
+                             document.getElementById('text').innerHTML = this.responseText;
                           }
                        }
                        
@@ -43,12 +45,11 @@
                     //     if(this.readyState == 4 && this.status == 200){
                     //         //console.log(this.responseText);
                     //     }
-                    }
-                   
+                    // }
+                  //  sends request
+                 xhr.send(); 
                  }
-                 xhr.send();
-            }
-                 
+                
             </script>
         </body>
     </head>
